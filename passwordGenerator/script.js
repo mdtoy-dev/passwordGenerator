@@ -120,6 +120,29 @@ function getPasswordOptions() {
 var options = getPasswordOptions();
 console.log(options);
 
+function finalArray() {
+  var chosenOptions = [];
+
+  if (options.lower === true) {
+    chosenOptions = chosenOptions.concat(lowerCasedCharacters);
+  }
+  if (options.upper === true) {
+    chosenOptions = chosenOptions.concat(upperCasedCharacters);
+  }
+  if (options.numeric === true) {
+    chosenOptions = chosenOptions.concat(numericCharacters);
+  }
+  if (options.special === true) {
+    chosenOptions = chosenOptions.concat(specialCharacters);
+  }
+
+  return chosenOptions
+}
+
+var finalArray = finalArray();
+console.log(finalArray);
+
+
 // Function for getting a random element from an array
 function getRandom(arr) {
 
@@ -129,6 +152,10 @@ function getRandom(arr) {
 function generatePassword() {
 
 }
+
+
+
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
