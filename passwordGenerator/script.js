@@ -153,10 +153,19 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
+  
+  var password = "";
 
+  for (var i = 0; i < options.length; i++) {
+    var char = getRandom(finalArray);
+    password += char;
+  }
+
+  return password;
 }
 
-
+var pass = generatePassword();
+console.log(pass);
 
 
 
